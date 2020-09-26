@@ -59,3 +59,9 @@ article{
     height: 150px;
     background-color: darkgreen;
 }
+
+.footer-bar{
+    flex-basis: 100%;
+    height: 100px;
+    background-color: darkolivegreen;
+}
