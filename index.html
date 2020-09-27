@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <title>Tienda Virtual</title>
 </head>
 <body>
@@ -32,14 +34,122 @@
 <!-- Aquí termina el header -->
 <!-- inicia la sección principal que contiene el aside y el menú con los productos de compra -->
    <section>
+       <!-- inicia el aside con que contiene la busqueda de los productos  -->
         <aside class="aside">
-            esto es un aside
+    <!-- inicia el formulario de búsqueda -->
+    <form action="">
+        <!-- inicia sección de filtro de búsqueda -->
+        <div class="filter-container">
+            <div class="filter">
+                <h2 >FILTROS</h2>
+            </div>
+            <div class="clean-up">
+                <button class="cleaning-button" > 
+                    Limpiar <i class="fas fa-trash-alt"></i>
+                </button>
+            </div> 
+        </div>
+        <!-- termina la sección de filtro de búsqueda -->
+    
+        <!-- inicia el formulario -->
+   
+        <!-- inicia el apartado de búsqueda con entrada manual-->
+        <div class="search">
+            <h3>BÚSQUEDA</h3>
+            <label for="buscar-entradatext">
+                <textarea name="buscar" placeholder="Buscar productos"  cols="40" rows="2" id="buscarentradatext">
+                </textarea>
+            </label>
+        </div>
+
+        <!-- inicia el apartado de búsqueda por selección de categoría -->
+        <div class="category">
+            <h3>CATEGORÍA</h3>
+
+            <label for="consoles">
+                CONSOLAS <input type="checkbox" name="category" value="CONSOLAS" id="consoles">
+            </label>
+
+            <label for="notebook">
+                NOTEBOOK <input type="checkbox" name="category" value="NOTEBOOK" id="notebook">
+            </label>
+
+            <label for="cameras">
+                 CAMARAS <input type="checkbox" name="category" value="CAMARAS" id="camaras">
+            </label>
+            
+            <label for="cell-phones">
+                CELULARES <input type="checkbox" name="category" value="CELULARES" id="cell-phones">
+           </label>
+
+           <label for="accesories">
+                ACCESORIOS <input type="checkbox" name="category" value="ACCESORIOS" id="accesories">
+            </label>
+        </div>
+
+        <!-- inicia el apartado de score de los items -->
+        <div class="score">
+            <h3>PUNTAJE</h3>
+
+            <label for="fivestars">
+                <input type="checkbox" name="score" value="fivestars" id="fivestars"> 
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                (5)
+            </label>
+
+            <label for="fourstars">
+                <input type="checkbox" name="score" value="fourstars" id="fourstars"> 
+                <i class="far fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                (4)
+            </label>
+
+            <label for="threestars">
+                <input type="checkbox" name="score" value="threestars" id="threestars"> 
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                (3)
+            </label>
+
+            <label for="twostars">
+                <input type="checkbox" name="score" value="twostars" id="twostars"> 
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                (2)
+            </label>
+
+            <label for="onestar">
+                <input type="checkbox" name="score" value="onestar" id="onestar"> 
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="fas fa-star"></i>
+                (1)
+            </label>
+            
+        </div>
+    </form>
+    <!-- termina el formulario de busqueda -->
         </aside>
 
         <div class="article-container">
             <article class="burger-menu-bar long-bar">
                 <div class="sub-menu bar-left"></div>
-                <div class="sub-menu bar-right"></div>
+                <div class="sub-menu bar-right"></div><link rel="stylesheet" href="style.css">
             </article>
             <article></article>
             <article></article>

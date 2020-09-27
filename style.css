@@ -7,8 +7,7 @@ header{
 .long-bar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-   
+    align-items: center;  
 }
 
 
@@ -33,18 +32,90 @@ header{
 section{
     display: flex;
 }
+
 .aside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     flex-basis: 25%;
-    background-color: crimson;
-    height: auto;
+    background-color: #EEEEEE;
 }
 
+.filter-container{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 40px;
+    padding: 20px;
+    /* si le saco la altura a este contenedor abarca todo el aside, por qué???? */
+}
+
+.filter, .clean-up{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-family: 'Lora', serif; 
+    font-size: 13px;
+    background-color: #EEEEEE;
+    border-left: 15px;
+}
+
+
+.cleaning-button{
+    font-size: 18px;
+    font-family: 'Lora', serif; 
+    border: none;
+}
+
+button:hover {
+    font-size: 20;
+    background-color: #9b9b9b;
+  }
+
+  .search{
+     display: flex;  
+     flex-basis: 100%;
+     align-self: flex-start;
+     flex-direction: column;
+     justify-content: center;
+     height: auto;
+     background-color: #EEEEEE;
+     margin-left: 10px;
+     margin-right: 10px;
+  }
+  
+  #buscarentradatext{
+      border: none;
+      border-bottom: 1px solid black;
+      padding: 3px;
+      background-color: #eeeeee
+  }
+
+  h3, label {
+    margin-left: 30px;
+  }
+
+  .category, .score{
+      display: flex;
+      flex-basis: 100%;
+      flex-direction: column;
+      margin-left: 30px;
+  }
 .article-container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap ;
     flex-basis: 75%;
     background-color: cyan;
+}
+
+.fa-star
+{
+    color: #FBC02D;
 }
 
 article{
