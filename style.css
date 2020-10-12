@@ -78,7 +78,6 @@ color:#D7E3F7;
     background-image: url(images/banner.jpg    );
     background-position: center;
     background-size: 200px 200px;
-/* Male aquí tengo un problema, quisiera achicar la imágen */
     height: 300px;
 }
 
@@ -139,7 +138,7 @@ button:hover {
     background-color: #9b9b9b;
   }
 
-  .search{
+  .choose-your-flavor{
      display: flex;  
      flex-basis: 100%;
      align-self: flex-start;
