@@ -32,6 +32,15 @@ header{
     margin-bottom: 10px;
 }
 
+.fa-seedling{
+    font-size: 50px;
+    color: rgba(0, 255, 0, 0.801);
+}
+
+.icon-store{
+    color: rgba(0, 255, 0, 0.767);
+}
+/* TANIA VERIFICA SI ES NECESARIO MANTENER ESTE CÓDIGO */
 .nav-images{
     width: 40px;
 }
@@ -41,7 +50,7 @@ header{
     font-size: 35px;
     font-weight: 200;
     margin-top:5px;
-    color:#D7E3F7;
+    color: #65781C;
 }
 
 #shopping-cart-button{
@@ -49,8 +58,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: none;
-background-color: #A97C94;
-color:#D7E3F7;
+color: rgba(0, 255, 0, 0.801);
+color:#65781C ;
 }
 
 #shopping-cart-button:hover{
@@ -83,12 +92,9 @@ color:#D7E3F7;
 
 #banner-text{
     font-size: 80px;
-    color: #65781C;
 }
 
-.banner-img{
-    width:100px ;
-}
+
 /* --------Ends the banner style ------------*/
 
 /* --------Starts the shopping chart style ------------*/
