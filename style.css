@@ -18,7 +18,7 @@ header{
 
 #main-bar{
     height: 80px;
-    background-color: #96AC87;
+    background-color: fafa;
 }
 
 .sub-menu {
@@ -33,24 +33,21 @@ header{
 }
 
 .fa-seedling{
-    font-size: 50px;
-    color: rgba(0, 255, 0, 0.801);
+    font-size: 25;
 }
 
-.icon-store{
-    color: rgba(0, 255, 0, 0.767);
-}
 /* TANIA VERIFICA SI ES NECESARIO MANTENER ESTE CÓDIGO */
 .nav-images{
     width: 40px;
 }
 
 .store-name, #banner-text{
-    font-family: 'Norican', cursive;
-    font-size: 35px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 800px;
+    font-size: 25px;
     font-weight: 200;
     margin-top:5px;
-    color: #65781C;
+   color: #23360F;
 }
 
 #shopping-cart-button{
@@ -82,16 +79,17 @@ color:#65781C ;
 /* --------starts the banner style ------------*/
 #store-banner{
     display: flex;
-    align-items:center;
+    align-items:flex-end;
     justify-content: center;
-    background-image: url(images/fondo.jpg );
+    background-image: url(images/bakground.jpg );
+    background-size: contain;
     background-position: center;
-    background-size: auto;
     height: 300px;
 }
 
 #banner-text{
     font-size: 80px;
+    padding-top: 140px;
 }
 
 
@@ -171,7 +169,7 @@ button:hover {
     background-color: #9b9b9b;
   }
 
-  .choose-your-flavor{
+  .choose-your-favourite{
      display: flex;  
      flex-basis: 100%;
      align-self: flex-start;
@@ -210,7 +208,7 @@ button:hover {
 
 .fa-star
 {
-    color: #C48CC7;
+    color: #849935;
 }
 
 article{
@@ -218,7 +216,7 @@ article{
     justify-content: center;
     height: 380px;
     flex-basis: 30%;
-    background-color: #F0F3F8;
+    background-color: #FFFFFF;
     margin: 10px;
 }
 
