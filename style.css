@@ -55,8 +55,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 border: none;
-color: rgba(0, 255, 0, 0.801);
-color:#65781C ;
+color: #23360F;
+background-color: #FAFAFA;
 }
 
 #shopping-cart-button:hover{
@@ -203,7 +203,7 @@ button:hover {
     justify-content: space-evenly;
     flex-wrap: wrap ;
     flex-basis: 75%;
-    background-color: cyan;
+    background-color:#9FE0B8;
 }
 
 .fa-star
@@ -239,7 +239,7 @@ article{
     align-items: center;
     flex-basis: 100%;
     height: 100px;
-    background-color: #c48cc3;
+    background-color:#9FE0B8;
 }
 
 .footer-text{
