@@ -60,12 +60,16 @@ background-color: #FAFAFA;
 }
 
 #shopping-cart-button:hover{
-    background-color: #FF64E1;
+    background-color: #9FE0B8;
     font-size: 18px;
-    border: 1px solid palegreen;
+
     border-radius: 10px;
     padding: 5px;
 }
+
+#shopping-cart-button:focus-visible
+
+/* TANIA REVISA SI DEJAR ASÍ ESTO EN CSS ES BUENA PRÁCTICA */
 
 .shopping-cart-text{
     margin-left: 5px;
