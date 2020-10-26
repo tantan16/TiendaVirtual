@@ -18,7 +18,10 @@ header{
 
 #main-bar{
     height: 80px;
-    background-color: fafa;
+}
+
+#main-bar, #shopping-cart-button{
+    background-color:#baead6; 
 }
 
 .sub-menu {
@@ -32,19 +35,16 @@ header{
     margin-bottom: 10px;
 }
 
-.fa-seedling{
-    font-size: 25;
-}
 
 /* TANIA VERIFICA SI ES NECESARIO MANTENER ESTE CÓDIGO */
 .nav-images{
     width: 40px;
 }
 
-.store-name, #banner-text{
+.store-name, #banner-text,.shopping-cart-text{
     font-family: 'Anton', sans-serif;
     font-weight: 800px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 200;
     margin-top:5px;
    color: #23360F;
@@ -56,13 +56,11 @@ justify-content: center;
 align-items: center;
 border: none;
 color: #23360F;
-background-color: #FAFAFA;
 }
 
-#shopping-cart-button:hover{
+#cleaning-button:hover, #shopping-cart-button:hover{
     background-color: #9FE0B8;
     font-size: 18px;
-
     border-radius: 10px;
     padding: 5px;
 }
@@ -75,8 +73,9 @@ background-color: #FAFAFA;
     margin-left: 5px;
     margin-top:10px;
     margin-bottom: 10px;
-    font-size: medium;
 }
+
+/*Por qué cuando quito este estilo del texto del carrito, se borra todo????
 
 /* --------ends the navigation bar style ------------*/
 
@@ -96,10 +95,13 @@ background-color: #FAFAFA;
     padding-top: 140px;
 }
 
+.logo{
+    font-size: 60px;
+}
 
 /* --------Ends the banner style ------------*/
 
-/* --------Starts the shopping chart style ------------*/
+/* --------Starts the shopping chart style OVELRAY ------------*/
 
 .overlay{
     height: 100vh;
@@ -126,94 +128,135 @@ background-color: #FAFAFA;
 
 /* --------Ends the shopping chart style ------------*/
 
+/* starts the style of the section that contains the sidebar and the product */
+
+/* START general terms of style for searching and product sections*/
 section{
     display: flex;
+    flex-direction: row;
 }
 
+.aside, .filter-container, .cleaning-button, .fa-search, .article-container, .choose-your-plant {
+ background-color:#baead6;
+}
 .aside{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     flex-basis: 25%;
-    background-color: #FAFAFA;
+    height: auto;
 }
 
-.filter-container{
-    display: flex;
-    flex-basis: 100%;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 20px;
-    height: 40px;
-    padding: 20px;
-    /* si le saco la altura a este contenedor abarca todo el aside, por qué???? */
-}
+/* ENDS general terms of style for searching and product sections */
 
+/*Style of the section that serves as a header for the searching section that contains the manual searching and the trash can*/
+
+/* Starts searching-container and search (PARENTS) style  */
+.searching-container, .search{
+display: flex;
+flex-basis: 100%;
+align-items: flex-start;
+margin:30px;
+}
+/* Ends earching-container and search (PARENTS) styl*/
+
+/* Start filter and clean-up (Children of searching-container) */
 .filter, .clean-up{
     display: flex;
-    flex-basis: 100%;
-    align-items: center;
-    font-family: 'Lora', serif; 
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: space-around;
+    align-items: center;    
     font-size: 13px;
-    background-color:#D7E3F7;
     border-left: 15px;
 }
 
-
 .cleaning-button{
+    font-weight: bolder;
+    display: flex;
     font-size: 18px;
     font-family: 'Lora', serif; 
     border: none;
+    width: 100%;
 }
 
-button:hover {
-    font-size: 20;
-    background-color: #9b9b9b;
-  }
+.fa-trash-alt{
+    font-size: 18px;
+}
 
-  .choose-your-favourite{
+
+.search{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+   
+}
+
+/* Manual-searching label style */
+
+#manual-searching{
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid grey;
+    color: var(--color-text-dark);
+}
+
+.fa-search{
+    position: absolute;
+    right: 3px;
+    top:30px;
+}
+
+
+
+/* starts the filter secion style  */
+  .choose-your-plant{
      display: flex;  
      flex-basis: 100%;
      align-self: flex-start;
      flex-direction: column;
      justify-content: center;
      height: auto;
-     background-color: #EEEEEE;
      margin-left: 10px;
      margin-right: 10px;
   }
   
-  #buscarentradatext{
-      border: none;
-      border-bottom: 1px solid black;
-      padding: 3px;
-      background-color: #eeeeee
-  }
 
-  h3, label {
-    margin-left: 30px;
-  }
 
-  .category, .score{
+  .choose-your-plant, .score{
       display: flex;
       flex-basis: 100%;
       flex-direction: column;
-      margin-left: 30px;
+      margin-left: 0;
+  }
+
+
+
+  .score{
+      padding: 40px;
   }
 .article-container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap ;
     flex-basis: 75%;
-    background-color:#9FE0B8;
 }
 
 .fa-star
 {
     color: #849935;
+    font-size: 10px
+    margin: 1px;
 }
+
+/* ends the searching section style  */
+
+
+/* starts the product section style */
+
+/* general style  */
+
 
 article{
     display: flex;
@@ -230,12 +273,16 @@ article{
     margin-top: 20px;
 }
 
-
-.burger-menu-bar{
+/* starts the section of the product menu section, style */
+#burger-menu-bar{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
     flex-basis: 100%;
-    height: 150px;
-    background-color: #3797B1;
+    height: auto;
 }
+
+
 
 .footer-bar{
     display: flex;

@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Tienda Virtual</title>
 </head>
+
 <body>
-<!-- Header starts, contains the nav-bar that contains the logo and the shopping cart -->
-    <header> 
+    <!-- Header starts, contains the nav-bar that contains the logo and the shopping cart -->
+    <header>
         <nav class="nav-bar" id="main-bar">
 
             <!--this tiny section contains just the logo-->
             <div class="sub-menu bar-left">
                 <i class="fas fa-seedling icon-store"></i>
-                <P class="store-name">Plantería de Ada</P>
+                <P class="store-name">ADA Plantas</P>
             </div>
 
             <!-- this is the shopping-cart button -->
             <div class="sub-menu bar-right">
                 <button id="shopping-cart-button">
-                    <img class="nav-images" src="images/shopping-cart.svg" alt="shopping-cart">
+                    <i class="fas fa-shopping-cart"></i>
                     <p class="shopping-cart-text"> Carrito (O items)</p>
                 </button>
             </div>
@@ -37,145 +39,161 @@
                         <li>coso</li>
                         <li>coso</li>
                     </ul>
-                <button id="close-menu">Cerrar</button>
-            </div>
+                    <button id="close-menu">Cerrar</button>
+                </div>
         </nav>
 
         <!-- this section contains the banner of the store-->
         <div id="store-banner">
-            <p id="banner-text"> Crea tu espacio <i class="fas fa-seedling nav-images"></i> </p>
-            
+            <p id="banner-text"> Crea tu espacio <i class="fas fa-seedling logo"></i> </p>
         </div>
     </header>
-<!-- Header ends -->
+    <!-- Header ends -->
 
-<!-- inicia la sección principal que contiene el aside y el menú con los productos de compra -->
-   <section>
-       <!-- inicia el aside con que contiene la busqueda de los productos  -->
+    <!-- this section contains the list of products and the aside that contains all the searching filters -->
+    <section id="#main-section-of-the-store">
+        <!-- starts the section with all the searching filters -->
         <aside class="aside">
-    <!-- inicia el formulario de búsqueda -->
-    <form action="">
-        <!-- inicia sección de filtro de búsqueda -->
-        <div class="filter-container">
-            <div class="filter">
-                <h2 >Filtros</h2>
-            </div>
-            <div class="clean-up">
-                <button class="cleaning-button" > 
-                   <span>Limpiar </span><i class="fas fa-trash-alt"></i>
-                </button>
-            </div> 
-        </div>
-        <!-- termina la sección de filtro de búsqueda -->
-    
-        <!-- inicia el formulario -->
-   
-        <!-- inicia el apartado de búsqueda con entrada manual-->
-        <div class="search">
-            <h3>Búsqueda</h3>
-            <label for="buscar-entradatext">
-                <textarea name="buscar" placeholder="Buscar productos"  cols="40" rows="2" id="buscarentradatext">
-                </textarea>
-            </label>
-        </div>
+            <!-- starts the header of the searching form section-->
+            <form action="">
+                <!-- this section serves as a header for the searching section -->
+                <div class="searching-container">
 
-        <!-- inicia el apartado de búsqueda por selección de categoría -->
-        <div class="choose-your-favourite">
-            <h3>Elige tu favorita</h3>
+                    <div class="filter">
+                        <h2> Filtros </h2>
+                    </div>
 
-            <label for="chocolatosos">
-                 <input type="checkbox" name="category" value="chocolatosos" id="chocolatosos"> <span>Chocolatosos</span>
-            </label>
+                    <div class="clean-up">
+                        <button class="cleaning-button" id="cleaning-button">
+                            <p>Limpiar <i class="fas fa-trash-alt"></i></p>
+                        </button>
+                    </div>
 
-            <label for="frutales">
-                <input type="checkbox" name="category" value="frutales" id="frutales">  <span> Frutales </span>
-            </label>
+                </div>
 
-            <label for="citricos">
-                  <input type="checkbox" name="category" value="citricos" id="citricos"> <span>Cítricos</span>
-            </label>
-            
-            <label for="veganos">
-                <input type="checkbox" name="category" value="veganos" id="veganos"> <span> Veganos </span>
-           </label>
+                <!-- starts section that contains manual searching    -->
+                <div class="search" id="search">
+                    <h3>Búsqueda</h3>
+                    <i class="fas fa-search"></i>
+                    <label for="manual-search">
+                        <textarea name="manual-searcning" id="manual-searching" cols="30" rows="2"
+                            placeholder="Buscar"></textarea>
+                    </label>
+                </div>
+                <!-- ends the section that contains manual searching -->
 
-           <label for="festivos">
-                <input type="checkbox" name="category" value="festivos" id="festivos"> <span>Festivos</span>
-            </label>
-        </div>
+                <!-- starts the searching by category checbox section -->
+                <div class="choose-your-plant">
+                    <h3>Elige tu favorita</h3>
 
-        <!-- inicia el apartado de score de los items -->
-        <div class="score">
-            <h3>Muro de la fama</h3>
-            <label for="fivestars">
-                <input type="checkbox" name="score" value="fivestars" id="fivestars"> 
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                (5)
-            </label>
+                    <label for="chocolatosos">
+                        <input type="checkbox" name="choose-your-plant" value="chocolatosos" id="chocolatosos">
+                        <span>Chocolatosos</span>
+                    </label>
 
-            <label for="fourstars">
-                <input type="checkbox" name="score" value="fourstars" id="fourstars"> 
-                <i class="far fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                (4)
-            </label>
+                    <label for="frutales">
+                        <input type="checkbox" name="choose-your-plant" value="frutales" id="frutales"> <span> Frutales </span>
+                    </label>
 
-            <label for="threestars">
-                <input type="checkbox" name="score" value="threestars" id="threestars"> 
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                (3)
-            </label>
+                    <label for="citricos">
+                        <input type="checkbox" name="choose-your-plant" value="citricos" id="citricos"> <span>Cítricos</span>
+                    </label>
 
-            <label for="twostars">
-                <input type="checkbox" name="score" value="twostars" id="twostars"> 
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                (2)
-            </label>
+                    <label for="veganos">
+                        <input type="checkbox" name="choose-your-plant" value="veganos" id="veganos"> <span> Veganos </span>
+                    </label>
 
-            <label for="onestar">
-                <input type="checkbox" name="score" value="onestar" id="onestar"> 
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="fas fa-star"></i>
-                (1)
-            </label>
-            
-        </div>
-    </form>
-    <!-- termina el formulario de busqueda -->
+                    <label for="festivos">
+                        <input type="checkbox" name="choose-your-plant" value="festivos" id="festivos"> <span>Festivos</span>
+                    </label>
+                </div>
+                <!-- ends the searching by category checbox section -->
+                <!--  -->
+                <div class="score">
+                    <h3>Muro de la fama</h3>
+                    <label for="fivestars">
+                        <input type="checkbox" name="score" value="fivestars" id="fivestars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5)</span>
+                       
+                    </label>
+               
+                    <label for="fourstars">
+                        <input type="checkbox" name="score" value="fourstars" id="fourstars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4)</span>
+
+                    </label>
+
+                    <label for="threestars">
+                        <input type="checkbox" name="score" value="threestars" id="threestars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(3)</span>
+                        
+                    </label>
+
+                    <label for="twostars">
+                        <input type="checkbox" name="score" value="twostars" id="twostars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(2)</span>
+                       
+                    </label>
+
+                    <label for="onestar">
+                        <input type="checkbox" name="score" value="onestar" id="onestar">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(1)</span>
+                       
+                    </label>
+
+                </div>
+            </form>
         </aside>
+            <!-- Ends the section that contains the searching forms-->
+       
+  
 
+     <!-- Starts section where the products are listed -->
         <div class="article-container">
-            <article class="burger-menu-bar long-bar">
-                <div class="sub-menu bar-left"></div>
-                <div class="sub-menu bar-right"></div><link rel="stylesheet" href="style.css">
+             <!-- this is the bar that contains the grid and list menues   -->
+            <article class="burger-menu-bar-contaniner long-bar" id="burger-menu-bar">
+                <div class="sub-menu bar-left">
+                    <i class="fas fa-bars .hamburguer-menu"></i>
+                </div>
+                <div class="sub-menu bar-right"></div>
+                
             </article>
+             <!-- ends the bar that contains the grid and list menues   -->
+
             <article id="chocolate-cupcake">
                 <img class="flavor" src="images/aloe-vera.jpg" alt="pancake-cupcakeflavored">
             </article>
             <article>
                 <img class="flavor" src="images/helecho.jpg" alt="">
             </article>
-            
+
             <article>
-               <img class="flavor" src="images/cactus-luna.jpg" alt="">
+                <img class="flavor" src="images/cactus-luna.jpg" alt="">
             </article>
             <article>
                 <img class="flavor" src="images/potus.jpg" alt="">
@@ -193,7 +211,7 @@
                 <img class="flavor" src="images/planta-rosario-bolitas.jpg" alt="">
             </article>
             <article>
-                <img  class= "flavor" src="images/peperomia.jpg" alt="">
+                <img class="flavor" src="images/peperomia.jpg" alt="">
             </article>
             <article>
                 <img class="flavor" src="images/espada-de-rey.jpg" alt="">
@@ -206,16 +224,21 @@
             </article>
         </div>
 
-   </section>
+    </section>
 
-<!-- inicia la sección del footer  -->
-   <footer class="footer-bar">
-            <img class="nav-images" alt ="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjEwNC43MzkiIHkxPSI0NDIuNDY2IiB4Mj0iMzkzLjc5NSIgeTI9IjE1My40MSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzQxZGZkMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2VlODNlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGlkPSJncmFkaWVudCI+PHBhdGggZD0iTTExNS41NjIsMzI5LjM0NGE4LDgsMCwwLDAtMy4zOSw4LjNMMTQwLjE2LDQ3MC41OTNBMzIuMTQ1LDMyLjE0NSwwLDAsMCwxNzEuNDc0LDQ5NkgzNDAuNTI2YTMyLjE0NSwzMi4xNDUsMCwwLDAsMzEuMzE0LTI1LjQwN2wyNy45ODgtMTMyLjk0NWE4LDgsMCwwLDAtMy4zOS04LjMsNTIsNTIsMCwwLDAtNC44MjYtMi44MjIsMTE4LjE1MiwxMTguMTUyLDAsMCwwLTExLjk3OS00My42MTNBMzguNzIzLDM4LjcyMywwLDAsMCwzODQsMjY1LjAxNnYtMi4wMzJhMzkuMjI5LDM5LjIyOSwwLDAsMC0yMS4wOTEtMzQuNjEzQTM4LjgsMzguOCwwLDAsMCwzNjgsMjA5LjE2NHYtMi4zMjhhMzguODg0LDM4Ljg4NCwwLDAsMC0zNy41NDgtMzguODE1LDYyLjA1NSw2Mi4wNTUsMCwwLDAtOC44MDctODYuNGwtMjguNTI0LTIzLjc3QTgsOCwwLDAsMCwyODAsNjRWOTIuNjg3YTE5LjMsMTkuMywwLDAsMS0xNS43OCwxOC45ODFBMzkuOTczLDM5Ljk3MywwLDAsMCwyMzIsNDhxLTEsMC0yLC4wNTFhNTAuMTkxLDUwLjE5MSwwLDAsMSw4LjQ4OS0xOS4zOCw4LDgsMCwwLDAtMTIuOTg4LTkuMzQyQTY1Ljk2OCw2NS45NjgsMCwwLDAsMjEzLjIxNiw1Mi43YTM5Ljk1NywzOS45NTcsMCwwLDAtOS40MTYsNjMuNjRBMzcuMjQyLDM3LjI0MiwwLDAsMCwxODQsMTQ5LjIxMnY1LjU3NkEzNy4xNTksMzcuMTU5LDAsMCwwLDE4Ni40NDIsMTY4aC0zLjYwNkEzOC44OCwzOC44OCwwLDAsMCwxNDQsMjA2LjgzNnYyLjMyOGEzOC44LDM4LjgsMCwwLDAsNS4wOTEsMTkuMjA3QTM5LjIyOSwzOS4yMjksMCwwLDAsMTI4LDI2Mi45ODR2Mi4wMzJhMzguNzIzLDM4LjcyMywwLDAsMCw0LjM2NywxNy44OTMsMTE4LjEyOCwxMTguMTI4LDAsMCwwLTExLjk3OSw0My42MTNBNTEuNzcyLDUxLjc3MiwwLDAsMCwxMTUuNTYyLDMyOS4zNDRaTTE1NS44MTYsNDY3LjMsMTI5LjAzLDM0MC4wNjJhMzUuMTQsMzUuMTQsMCwwLDEsMzEuNjUyLjg4NUwxODIuNjM3LDQ4MEgxNzEuNDc0QTE2LjA3NCwxNi4wNzQsMCwwLDEsMTU1LjgxNiw0NjcuM1ptNTIuNjQ5LTEyNi40NjFMMjIzLjExNCw0ODBIMTk4LjgzNkwxNzYuNzYzLDM0MC4yQTM1LjEyNiwzNS4xMjYsMCwwLDEsMjA4LjQ2NSwzNDAuODM1Wk0yMzkuMiw0ODAsMjI0LjYxMSwzNDEuMzg2YTk5LjEzMSw5OS4xMzEsMCwwLDEsNjIuNzc4LDBMMjcyLjgsNDgwWm02NC4zMzMtMTM5LjE2NWEzNS4xMjYsMzUuMTI2LDAsMCwxLDMxLjctLjYzNEwzMTMuMTY0LDQ4MEgyODguODg2Wk0zNTYuMTg0LDQ2Ny4zQTE2LjA3NCwxNi4wNzQsMCwwLDEsMzQwLjUyNiw0ODBIMzI5LjM2M2wyMS45NTUtMTM5LjA1M2EzNS4xNCwzNS4xNCwwLDAsMSwzMS42NTItLjg4NVpNMjMyLDY0YTI0LDI0LDAsMSwxLTI0LDI0QTI0LjAyOCwyNC4wMjgsMCwwLDEsMjMyLDY0Wk0xNDQsMjYyLjk4NGEyMy4wODQsMjMuMDg0LDAsMCwxLDE5LjYwNy0yMi43MzIsMzE0LjI4MywzMTQuMjgzLDAsMCwwLDg3LjQ4LTIyLjUyMSw4LDgsMCwxLDAtNi4xNzQtMTQuNzYxLDI5OC4yNzQsMjk4LjI3NCwwLDAsMS03OS40NzcsMjAuOTYxQTIyLjgzMiwyMi44MzIsMCwwLDEsMTYwLDIwOS4xNjR2LTIuMzI4QTIyLjg2MiwyMi44NjIsMCwwLDEsMTgyLjgzNiwxODRoMTguM2E4LDgsMCwwLDAsNS41LTEzLjgxLDIxLjAxMiwyMS4wMTIsMCwwLDEtNi42MzktMTUuNHYtNS41NzZBMjEuMjM2LDIxLjIzNiwwLDAsMSwyMjEuMjEyLDEyOGgzOS40NzVBMzUuMzEzLDM1LjMxMywwLDAsMCwyOTYsOTIuNjg3VjgxLjA4bDE1LjQsMTIuODM1YTQ2LjEyOSw0Ni4xMjksMCwwLDEtNS43OTUsNzQuOTkxbC0uMzg3LjIzM2E3Ljk2OSw3Ljk2OSwwLDAsMC0uOTM3LjY2M2wtNC43MjcsMy4yNjlDMjkyLDE3OC4zLDI4NC4xLDE4My4yNDIsMjc2LjA3OCwxODcuNzUyYTgsOCwwLDEsMCw3Ljg0NCwxMy45NDVjOC40NDgtNC43NTIsMTYuNzctOS45NTYsMjQuNzM2LTE1LjQ2OEwzMTEuODgxLDE4NGgxNy4yODNBMjIuODYyLDIyLjg2MiwwLDAsMSwzNTIsMjA2LjgzNnYyLjMyOGEyMi44NTEsMjIuODUxLDAsMCwxLTcuNzc0LDE3LjE1NSw3Ljk1OCw3Ljk1OCwwLDAsMC0xLjUzNSwxLjgzM2wtNC4yOTQsMi45N2EyOTguNzM4LDI5OC43MzgsMCwwLDEtNjMuNDExLDMzLjQsOCw4LDAsMSwwLDUuNywxNC45NSwzMTQuNzU2LDMxNC43NTYsMCwwLDAsNjYuODEyLTM1LjJsNC41NjUtMy4xNThBMjMuMTEsMjMuMTEsMCwwLDEsMzY4LDI2Mi45ODR2Mi4wMzJBMjMuMDExLDIzLjAxMSwwLDAsMSwzNDUuMDE2LDI4OEgyNTIuODkzYTgsOCwwLDAsMC02Ljk2My0xNC4wNTgsMzAxLjM1NywzMDEuMzU3LDAsMCwxLTM3LjgyNyw3LjU2OWwtNDUuNDgzLDYuMDY4QTIzLjAxOSwyMy4wMTksMCwwLDEsMTQ0LDI2NS4wMTZabS0uMTc2LDMzLjM2OGEzOC43ODcsMzguNzg3LDAsMCwwLDE3Ljc2LDcuMjY1Yy4wNTQuMDA3LjEwNy4wMTYuMTYyLjAyMSwxLjcxNS4yMzEsMTgzLjI3LjM2MiwxODMuMjcuMzYyYTM4Ljc3NCwzOC43NzQsMCwwLDAsMjMuMTYtNy42NDgsMTAxLjk3OSwxMDEuOTc5LDAsMCwxLDYuNzcyLDI0Ljg1NEE1MS4wNyw1MS4wNywwLDAsMCwzNDQsMzI2LjY5NGE1MS4wOSw1MS4wOSwwLDAsMC00OC44MTEuNDQsMTE1LjEzOCwxMTUuMTM4LDAsMCwwLTc4LjM3OCwwLDUxLjA5LDUxLjA5LDAsMCwwLTQ4LjgxMS0uNDQsNTEuMDY5LDUxLjA2OSwwLDAsMC0zMC45NDgtNS40ODlBMTAxLjk1OSwxMDEuOTU5LDAsMCwxLDE0My44MjQsMjk2LjM1MlpNMjQwLDE0NGgxNnYxNkgyNDBabTU2LDE2SDI4MFYxNDRoMTZaTTE3NiwyMDBoMTZ2MTZIMTc2Wm0xNTEsMTVIMzExVjE5OWgxNlpNMjE2LDI2NEgyMDBWMjQ4aDE2WiIgc3R5bGU9ImZpbGw6dXJsKCNsaW5lYXItZ3JhZGllbnQpIi8+PC9nPjwvc3ZnPgo=" />
-                <P class="footer-text">Rebel-CupCake agradece tu compra, regresa pronto</P>
-               
-   </footer>
+    <!-- inicia la sección del footer  -->
+    <footer class="footer-bar">
+            <i class="fas fa-seedling icon-store"></i>
+        <P class="footer-text">Ada plantas hace tu vida verde, regresa pronto</P>
+
+    </footer>
+
+
+
+
 
 
     <script src="main.js"></script>
 </body>
+
 </html>
