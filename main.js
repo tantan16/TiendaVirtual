@@ -5,6 +5,9 @@ const shoppingCartMenu = document.getElementById("mainbox-shopping-cart")
 const overlay = document.getElementById("overlay")
 const plantManualSearch = document.querySelector("#input-manual-searching")
 const productCards = document.querySelectorAll(".product-card")
+const plantScoreFilter = document.querySelectorAll(".plant-score")
+const plantClassFilter = document.querySelectorAll(".plant-type-filter")
+
 
 
     openShoppingCartMenu.onclick = () => {
@@ -21,15 +24,12 @@ const productCards = document.querySelectorAll(".product-card")
 
 //Starts the code for the filter section
 
-//input filter 
+//input filter plant manual searching 
 
 plantManualSearch.oninput = () => {
     for (let card of productCards) {
 
-        console.log("nombre de la planta", card.dataset.nombre)
-        console.log("busqueda del usuario en minusculas", plantManualSearch.value.toLowerCase())
-
-        if (card.dataset.nombre.toLowerCase().includes(plantManualSearch.value.toLowerCase())) {
+        if (card.dataset.name.toLowerCase().includes(plantManualSearch.value.toLowerCase())) {
             card.classList.remove("hidden")
         } else {
             card.classList.add("hidden")
@@ -38,3 +38,36 @@ plantManualSearch.oninput = () => {
     }
 }
 
+
+// stars-score plant filter 
+for (let checkbox of plantScoreFilter) {
+    checkbox.oninput = () => {
+      for (let card of productCards) {
+        card.classList.add('hidden');
+        for (let checkbox2 of plantScoreFilter) {
+          if (checkbox2.checked) {
+            if (checkbox2.value === card.dataset.score) {
+              card.classList.remove('hidden');
+            }
+          }
+        } 
+      }
+    };
+  }
+
+// plant-type filter 
+
+for (let checkbox of plantClassFilter) {
+    checkbox.oninput = () => {
+      for (let card of productCards) {
+        card.classList.add('hidden');
+        for (let checkbox2 of plantClassFilter) {
+          if (checkbox2.checked) {
+            if (checkbox2.value === card.dataset.type) {
+              card.classList.remove('hidden');
+            }
+          }
+        } 
+      }
+    };
+  }

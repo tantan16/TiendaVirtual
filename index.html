@@ -110,27 +110,27 @@
                     <h3>Elige la tuya </h3>
 
                     <label for="aromatica">
-                        <input type="checkbox" name="choose-your-plant" value="aromatica" id="aromatica">
+                        <input type="checkbox" name="choose-your-plant" value="aromatica" id="aromatica" class="plant-type-filter">
                         <p>Aromática</p>
                     </label>
 
                     <label for="de-sombra">
-                        <input type="checkbox" name="choose-your-plant" value="de-sombra" id="de-sombra">
+                        <input type="checkbox" name="choose-your-plant" value="de-sombra" id="de-sombra" class="plant-type-filter">
                         <p> De sombra</p>
                     </label>
 
                     <label for="suculenta">
-                        <input type="checkbox" name="choose-your-plant" value="suculenta" id="suculenta">
+                        <input type="checkbox" name="choose-your-plant" value="suculenta" id="suculenta" class="plant-type-filter">
                         <p> Suculentas </p>
                     </label>
 
                     <label for="de-sol">
-                        <input type="checkbox" name="choose-your-plant" value="de-sol" id="de-sol">
+                        <input type="checkbox" name="choose-your-plant" value="de-sol" id="de-sol" class="plant-type-filter">
                         <p>De sol</p>
                     </label>
 
-                    <label for="Colgantes">
-                        <input type="checkbox" name="choose-your-plant" value="colgantes" id="colgantes">
+                    <label for="Colgante">
+                        <input type="checkbox" name="choose-your-plant" value="colgante" id="colgante" class="plant-type-filter">
                         <span>Colgantes</span>
                     </label>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="score">
                     <h3>Muro de la fama</h3>
                     <label for="fivestars">
-                        <input type="checkbox" name="score" value="fivestars" id="fivestars">
+                        <input type="checkbox" name="score" value="fivestars" id="fivestars" class="plant-score">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -150,7 +150,7 @@
                     </label>
 
                     <label for="fourstars">
-                        <input type="checkbox" name="score" value="fourstars" id="fourstars">
+                        <input type="checkbox" name="score" value="fourstars" id="fourstars" class="plant-score">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -160,7 +160,7 @@
                     </label>
 
                     <label for="threestars">
-                        <input type="checkbox" name="score" value="threestars" id="threestars">
+                        <input type="checkbox" name="score" value="threestars" id="threestars" class="plant-score">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -171,7 +171,7 @@
                     </label>
 
                     <label for="twostars">
-                        <input type="checkbox" name="score" value="twostars" id="twostars">
+                        <input type="checkbox" name="score" value="twostars" id="twostars" class="plant-score">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
@@ -182,7 +182,7 @@
                     </label>
 
                     <label for="onestar">
-                        <input type="checkbox" name="score" value="onestar" id="onestar">
+                        <input type="checkbox" name="score" value="onestar" id="onestar" class="plant-score">
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                         <i class="far fa-star"></i>
@@ -222,7 +222,7 @@
             <!-- starts the section that contains all the product features and prices -->
 
             <!--------------- Product One ----------------------------------------->
-            <article class="product-card" data-nombre="aloe-vera">
+            <article class="product-card" data-name="aloe-vera" data-score = "fivestars" data-type="suculenta">
                 <div class="plant-img">
                     <img class="plant-type" src="images/aloe-vera.jpg" alt="aloe-vera-plant">
                 </div>
@@ -240,7 +240,7 @@
                 </div>
             </article>
             <!--------------- Product two ----------------------------------------->
-            <article class="product-card" data-nombre="helecho">
+            <article class="product-card" data-name="helecho" data-score="threestars" data-type="de-sombra">
                 <div class="plant-img">
                     <img class="plant-type" src="images/helecho.jpg" alt="helecho">
                 </div>
@@ -258,7 +258,7 @@
                 </div>
             </article>
             <!--------------- Product three ----------------------------------------->
-            <article class="product-card" data-nombre="cactus-luna">
+            <article class="product-card" data-name="cactus-luna" data-score="fivestars" data-type="suculenta">
                 <div class="plant-img">
                     <img class="plant-type" src="images/cactus-luna.jpg" alt="cactus-luna">
                 </div>
@@ -276,7 +276,7 @@
                 </div>
             </article>
             <!--------------- Product four ----------------------------------------->
-            <article class="product-card" data-nombre="potus">
+            <article class="product-card" data-name="potus" data-score="twostars" data-type="de-sol">
                 <div class="plant-img">
                     <img class="plant-type" src="images/potus.jpg" alt="potus">
                 </div>
@@ -294,7 +294,7 @@
                 </div>
             </article>
             <!--------------- Product five ----------------------------------------->
-            <article class="product-card" data-nombre="lavanda">
+            <article class="product-card" data-name="lavanda" data-score="onestar" data-type="aromatica">
                 <div class="plant-img">
                     <img class="plant-type" src="images/lavanda.jpg" alt="lavanda">
                 </div>
@@ -312,7 +312,7 @@
                 </div>
             </article>
             <!--------------- Product six ----------------------------------------->
-            <article class="product-card" data-nombre="enredadera-rosario">
+            <article class="product-card" data-name="enredadera-rosario" data-score="fourstars" data-type="colgante">
                 <div class="plant-img">
                     <img class="plant-type" src="images/enredadera-rosario.jpg" alt="enredadera-rosario">
                 </div>
@@ -330,7 +330,7 @@
                 </div>
             </article>
             <!--------------- Product seven ----------------------------------------->
-            <article class="product-card" data-nombre="pie-de-elefante">
+            <article class="product-card" data-name="pie-de-elefante" data-score="onestar" data-type="de-sombra">
                 <div class="plant-img">
                     <img class="plant-type" src="images/pie-de-elefante.jpg" alt="pie-de-elefante">
                 </div>
@@ -348,7 +348,7 @@
                 </div>
             </article>
             <!--------------- Product eight ----------------------------------------->
-            <article class="product-card" data-nombre="planta-rosario-bolitas">
+            <article class="product-card" data-name="planta-rosario-bolitas" data-score="fourstars" data-type="colgante">
                 <div class="plant-img">
                     <img class="plant-type" src="images/planta-rosario-bolitas.jpg" alt="planta-rosario-bolitas">
                 </div>
@@ -367,7 +367,7 @@
             </article>
             <!--------------- Product nine----------------------------------------->
 
-            <article class="product-card" data-nombre="peperomia">
+            <article class="product-card" data-name="peperomia" data-score="trheestars" data-type="de-sombra">
                 <div class="plant-img">
                     <img class="plant-type" src="images/peperomia.jpg" alt="peperomia">
                 </div>
@@ -385,7 +385,7 @@
                 </div>
             </article>
             <!--------------- Product ten ----------------------------------------->
-            <article class="product-card" data-nombre="espada-de-rey">
+            <article class="product-card" data-name="espada-de-rey" data-score="twostars" data-type="de-sombra">
                 <div class="plant-img">
                     <img class="plant-type" src="images/espada-de-rey.jpg" alt="">
                 </div>
@@ -403,7 +403,7 @@
                 </div>
             </article>
             <!--------------- Product eleven----------------------------------------->
-            <article class="product-card" data-nombre="kentia">
+            <article class="product-card" data-name="kentia" data-score="fivestars" data-type="de-sol">
                 <div class="plant-img">
                     <img class="plant-type" src="images/kentia.jpg" alt="kentia">
                 </div>
@@ -419,7 +419,7 @@
                 </div>
             </article>
             <!--------------- Product twelve---------------------------------------->
-            <article class="product-card" data-nombre="ficus-lyrata">
+            <article class="product-card" data-name="ficus-lyrata" data-score="threestars" data-type="de-sombra">
                 <div class="plant-img">
                     <img class="plant-type" src="images/ficus-moclame.jpg" alt="ficus-lyrata">
                 </div>
