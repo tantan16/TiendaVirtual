@@ -3,6 +3,11 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+
 /* --------starts the navigation bar style ------------*/
 header{
     display: flex;
@@ -36,7 +41,6 @@ header{
 }
 
 
-/* TANIA VERIFICA SI ES NECESARIO MANTENER ESTE CÓDIGO */
 .nav-images{
     width: 40px;
 }
@@ -65,9 +69,9 @@ color: #23360F;
     padding: 5px;
 }
 
-#shopping-cart-button:focus-visible
-
-/* TANIA REVISA SI DEJAR ASÍ ESTO EN CSS ES BUENA PRÁCTICA */
+#shopping-cart-button:focus{
+    visibility:visible;
+}
 
 .shopping-cart-text{
     margin-left: 5px;
@@ -75,7 +79,6 @@ color: #23360F;
     margin-bottom: 10px;
 }
 
-/*Por qué cuando quito este estilo del texto del carrito, se borra todo????
 
 /* --------ends the navigation bar style ------------*/
 
@@ -101,29 +104,106 @@ color: #23360F;
 
 /* --------Ends the banner style ------------*/
 
-/* --------Starts the shopping chart style OVELRAY ------------*/
-
+/* --------Start the OVERLAY and the shopping chart style  ------------*/
+ /* overlay style */
 .overlay{
     height: 100vh;
     width: 100vw;
     background-color: rgba(0, 0, 0,0.5 );
     position: absolute;
     top: 0;
+    margin: 0%;
     }
 
-#menu-shopping-cart{
-    width: 300px;
-    height: 100vh;
-    background-color:#55829A;
-    color: white;
-    position: absolute;
-    right: 0;
-    top: 0;
+/* start the general style of the shoping cart main box */
+
+#mainbox-shopping-cart, #shopping-cart-nav-bar, .bought-products-text, .shopping-cart-product-list{
+  display: flex;
 }
 
-.hidden{
-    display: none;
+#mainbox-shopping-cart{
+  
+    color: black;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+    width: 300px;
+    height: 400px;
+    
 }
+
+
+/* ends the general style of the shoping cart main box */
+
+
+#shopping-cart-nav-bar{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.shopping-cart-style{
+    background-color:#BAEAD6;
+    position: absolute;
+    transform: translateX(305px);
+    transition: 1s;
+}
+
+.shping-cart-menu{
+    margin-top:15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+
+.close-button{
+    margin-left: 100px;
+}
+
+#close-menu{
+    background-color: transparent;  
+    border: none;
+}
+
+#close-menu:focus{
+    visibility: visible;
+    
+}
+
+.fa-window-close{
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+.bought-products-text{
+    align-items: flex-start;
+    justify-content: start;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-top:80px;
+}
+
+
+.shopping-cart-product-list{
+    
+}
+
+
+.hidden{
+display: none;
+scri
+}
+
+
+
+
+.show{
+    transform: translatex(0);
+}
+
 
 
 /* --------Ends the shopping chart style ------------*/
@@ -139,6 +219,7 @@ section{
 .aside, .filter-container, .cleaning-button, .fa-search, .article-container, .choose-your-plant {
  background-color:#baead6;
 }
+
 .aside{
     display: flex;
     flex-direction: row;
@@ -150,7 +231,7 @@ section{
 
 /* ENDS general terms of style for searching and product sections */
 
-/*Style of the section that serves as a header for the searching section that contains the manual searching and the trash can*/
+/*START the Style of the section that serves as a header for the searching section that contains the manual searching and the trash can*/
 
 /* Starts searching-container and search (PARENTS) style  */
 .searching-container, .search{
@@ -258,14 +339,19 @@ article, .plant-img, .plant-features{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center
-}
+    align-items: center;
+    overflow: hidden;
+ }
 
 article{
     height: 380px;
     flex-basis: 30%;
     background-color: #FFFFFF;
     margin: 10px;
+}
+
+article:hover{
+    box-shadow: 0 0 10px;
 }
 
 p{
@@ -304,10 +390,7 @@ p{
     visibility: visible;
 }
 
-.plant-type{
-    width: 60%;
-    padding-bottom: 15px;
-}
+
 
 .see-as{
     padding-right: 10px;
@@ -316,6 +399,26 @@ p{
 .fa-th{
     padding-right: 10px;
 }
+
+/* START the style of the articles that contains all the card-product */
+
+.plant-img{
+    flex-basis: 55%;
+    margin: 0;
+    padding: 0;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.plant-type:hover{
+    transform: scale(1.7);
+    transition: all .3s ease-in;
+}
+
+.plant-type{
+    width: 90%;
+}
+
 .buy-button{
     border: solid .5px salmon;
     background-color: salmon;

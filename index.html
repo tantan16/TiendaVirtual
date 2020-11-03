@@ -9,11 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <title>Tienda Virtual</title>
+    <link rel="icon" href="favicon.ico" type="image/png" />
+    <title>Plant-Shop</title>
 </head>
 
 <body>
-    <!-- Header starts, contains the nav-bar that contains the logo and the shopping cart -->
+    <!-------------- Header starts, contains the nav-bar that contains the logo and the shopping cart -->
     <header>
         <nav class="nav-bar" id="main-bar">
 
@@ -30,33 +31,56 @@
                     <p class="shopping-cart-text"> Carrito (O items)</p>
                 </button>
             </div>
-
-            <div class="overlay hidden" id="overlay">
-                <div id="menu-shopping-cart" class="hidden">
-                    <ul>
-                        <li>coso</li>
-                        <li>coso</li>
-                        <li>coso</li>
-                        <li>coso</li>
-                    </ul>
-                    <button id="close-menu">Cerrar</button>
-                </div>
         </nav>
 
-        <!-- this section contains the banner of the store-->
+        <!------------------------STARTS THE OVERLAY AND THE SHOPING CART PLEGABLE MENU  ----------------------->
+
+        <!-- -----------overlay             -->
+        <div class="overlay hidden" id="overlay"> </div>
+
+        <aside class="shopping-cart-style" id="mainbox-shopping-cart">
+            <div id="shopping-cart-nav-bar">
+
+                <div class="shping-cart-menu">
+                    <h3>Carrito</h3>
+                </div>
+
+                <div class="shping-cart-menu close-button">
+                    <button id="close-menu">
+                        <i class="far fa-window-close"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="bought-products-text">
+                <p id="bought-items"> 0 producto(s) comprado(s)</p>
+            </div>
+
+            <div id="shopping-cart-product-list">
+                <div>
+                    <img src="" alt="">
+                    <p> COMPRAR COMPRAR </p>
+                </div>
+
+            </div>
+        </aside>
+
+
+        <!--------------- this section contains the banner of the store---------------->
         <div id="store-banner">
             <p id="banner-text"> Crea tu espacio <i class="fas fa-seedling logo"></i> </p>
         </div>
     </header>
-    <!-- Header ends -->
+    <!----------------------- Header ends------------------------------- -->
 
-    <!-- this section contains the list of products and the aside that contains all the searching filters -->
+    <!---------------------- this section contains the list of products and the aside that contains all the searching filters -->
     <section id="#main-section-of-the-store">
-        <!-- starts the section with all the searching filters -->
+        <!----------------------starts the part of this section with all the searching filters -->
         <aside class="aside">
-            <!-- starts the header of the searching form section-->
+            <!----------------------starts the header of the searching form section-->
             <form action="">
-                <!-- this section serves as a header for the searching section -->
+                <!--------------------- this section serves as a header for the searching section -->
                 <div class="searching-container">
 
                     <div class="filter">
@@ -70,30 +94,29 @@
                     </div>
 
                 </div>
-
-                <!-- starts section that contains manual searching    -->
+ <!------------------- starts section that contains manual searching----------------------------->
                 <div class="search" id="search">
                     <h3>Búsqueda</h3>
                     <i class="fas fa-search"></i>
                     <label for="manual-search">
-                        <textarea name="manual-searcning" id="manual-searching" cols="30" rows="2"
+                        <input type="text" name="manual-searcning"  id="input-manual-searching" cols="30" rows="3"
                             placeholder="Buscar"></textarea>
                     </label>
                 </div>
-                <!-- ends the section that contains manual searching -->
+<!-------------------- ends the section that contains manual searching ---------------------------------------------------------------------------->
 
-                <!-- starts the searching by category checbox section -->
+<!---------------------starts the searching by category checbox section --------------------------------------------------------------------------------------------->
                 <div class="choose-your-plant">
                     <h3>Elige la tuya </h3>
 
                     <label for="aromatica">
                         <input type="checkbox" name="choose-your-plant" value="aromatica" id="aromatica">
-                        <p>Aromática</p> 
+                        <p>Aromática</p>
                     </label>
 
                     <label for="de-sombra">
                         <input type="checkbox" name="choose-your-plant" value="de-sombra" id="de-sombra">
-                         <p> De sombra</p>
+                        <p> De sombra</p>
                     </label>
 
                     <label for="suculenta">
@@ -102,7 +125,7 @@
                     </label>
 
                     <label for="de-sol">
-                        <input type="checkbox" name="choose-your-plant" value="de-sol" id="de-sol"> 
+                        <input type="checkbox" name="choose-your-plant" value="de-sol" id="de-sol">
                         <p>De sol</p>
                     </label>
 
@@ -111,7 +134,7 @@
                         <span>Colgantes</span>
                     </label>
                 </div>
-                <!-- ends the searching by category checbox section -->
+                <!---------------------------- ends the searching by category checbox section --------------------------------------->
                 <!--  -->
                 <div class="score">
                     <h3>Muro de la fama</h3>
@@ -175,7 +198,6 @@
         <!-- Ends the section that contains the searching forms-->
 
 
-
         <!-- Starts section where the products are listed -->
         <div class="article-container">
             <!-- this is the bar that contains the grid and list menues   -->
@@ -189,18 +211,18 @@
                         <i class="fas fa-th"></i>
                     </button>
                     <button class="product-menu-button">
-                         <i class="fas fa-list"></i>
+                        <i class="fas fa-list"></i>
                     </button>
-                   
+
                 </div>
 
             </article>
-<!----------------- ends the bar that contains the grid and list menues  ------------------ -->
+            <!----------------- ends the bar that contains the grid and list menues  ------------------ -->
 
-<!-- starts the section that contains all the product features and prices -->
-           
-<!--------------- Product One ----------------------------------------->
-            <article id="aloe-vera">
+            <!-- starts the section that contains all the product features and prices -->
+
+            <!--------------- Product One ----------------------------------------->
+            <article class="product-card" data-nombre="aloe-vera">
                 <div class="plant-img">
                     <img class="plant-type" src="images/aloe-vera.jpg" alt="aloe-vera-plant">
                 </div>
@@ -208,17 +230,17 @@
                     <p>Aloe Vera</p>
                     <P>$150.00 mxn</P>
                     <P>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </P>
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product two ----------------------------------------->
-            <article>
+            <!--------------- Product two ----------------------------------------->
+            <article class="product-card" data-nombre="helecho">
                 <div class="plant-img">
                     <img class="plant-type" src="images/helecho.jpg" alt="helecho">
                 </div>
@@ -235,8 +257,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product three ----------------------------------------->
-            <article>
+            <!--------------- Product three ----------------------------------------->
+            <article class="product-card" data-nombre="cactus-luna">
                 <div class="plant-img">
                     <img class="plant-type" src="images/cactus-luna.jpg" alt="cactus-luna">
                 </div>
@@ -253,8 +275,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product four ----------------------------------------->
-            <article>
+            <!--------------- Product four ----------------------------------------->
+            <article class="product-card" data-nombre="potus">
                 <div class="plant-img">
                     <img class="plant-type" src="images/potus.jpg" alt="potus">
                 </div>
@@ -271,8 +293,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product five ----------------------------------------->
-            <article>
+            <!--------------- Product five ----------------------------------------->
+            <article class="product-card" data-nombre="lavanda">
                 <div class="plant-img">
                     <img class="plant-type" src="images/lavanda.jpg" alt="lavanda">
                 </div>
@@ -289,10 +311,10 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product six ----------------------------------------->
-            <article>
+            <!--------------- Product six ----------------------------------------->
+            <article class="product-card" data-nombre="enredadera-rosario">
                 <div class="plant-img">
-                     <img class="plant-type" src="images/enredadera-rosario.jpg" alt="enredadera-rosario">
+                    <img class="plant-type" src="images/enredadera-rosario.jpg" alt="enredadera-rosario">
                 </div>
                 <div class="plant-features">
                     <p>Enredadera-Rosario</p>
@@ -307,8 +329,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product seven ----------------------------------------->
-            <article>
+            <!--------------- Product seven ----------------------------------------->
+            <article class="product-card" data-nombre="pie-de-elefante">
                 <div class="plant-img">
                     <img class="plant-type" src="images/pie-de-elefante.jpg" alt="pie-de-elefante">
                 </div>
@@ -325,10 +347,10 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product eight ----------------------------------------->
-            <article>
+            <!--------------- Product eight ----------------------------------------->
+            <article class="product-card" data-nombre="planta-rosario-bolitas">
                 <div class="plant-img">
-                     <img class="plant-type" src="images/planta-rosario-bolitas.jpg" alt="planta-rosario-bolitas">
+                    <img class="plant-type" src="images/planta-rosario-bolitas.jpg" alt="planta-rosario-bolitas">
                 </div>
                 <div class="plant-features">
                     <p>Planta Rosario</p>
@@ -343,9 +365,9 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product nine----------------------------------------->
+            <!--------------- Product nine----------------------------------------->
 
-            <article>
+            <article class="product-card" data-nombre="peperomia">
                 <div class="plant-img">
                     <img class="plant-type" src="images/peperomia.jpg" alt="peperomia">
                 </div>
@@ -362,8 +384,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
- <!--------------- Product ten ----------------------------------------->
-            <article>
+            <!--------------- Product ten ----------------------------------------->
+            <article class="product-card" data-nombre="espada-de-rey">
                 <div class="plant-img">
                     <img class="plant-type" src="images/espada-de-rey.jpg" alt="">
                 </div>
@@ -380,8 +402,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
- <!--------------- Product eleven----------------------------------------->
-            <article>
+            <!--------------- Product eleven----------------------------------------->
+            <article class="product-card" data-nombre="kentia">
                 <div class="plant-img">
                     <img class="plant-type" src="images/kentia.jpg" alt="kentia">
                 </div>
@@ -396,8 +418,8 @@
                     <button class="buy-button">Comprar</button>
                 </div>
             </article>
-<!--------------- Product twelve---------------------------------------->
-            <article>
+            <!--------------- Product twelve---------------------------------------->
+            <article class="product-card" data-nombre="ficus-lyrata">
                 <div class="plant-img">
                     <img class="plant-type" src="images/ficus-moclame.jpg" alt="ficus-lyrata">
                 </div>
@@ -417,7 +439,7 @@
         </div>
 
     </section>
-<!-- ---------------------ENDS THE PRODUTC SECTION --------------------------------------------- -->
+    <!-- ---------------------ENDS THE PRODUTC SECTION --------------------------------------------- -->
     <!-- inicia la sección del footer  -->
     <footer class="footer-bar">
         <i class="fas fa-seedling icon-store"></i>
