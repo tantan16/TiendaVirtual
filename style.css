@@ -40,6 +40,9 @@ header{
     margin-bottom: 10px;
 }
 
+.burger-menu-bar-contaniner{
+    display: none;
+}
 
 .nav-images{
     width: 40px;
@@ -452,4 +455,25 @@ p{
 .footer-text{
     color: white;
     font-weight: bolder;
+}
+
+
+@media (max-width:600px){
+    *{
+        max-width: 600px;
+    }
+
+    .sub-menu{
+        display: none;
+    }
+
+    .burger-menu-bar-contaniner{
+    flex-basis: 100%;
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 10px;
+    font-size: 30px;
+    color: #F76363;
+    }
 }
